@@ -1,0 +1,43 @@
+Lab 01 Review
+
+Part #4
+
+4.1
+a) The method getCardValue() should be in the class Card.
+b) The method should be in the class Card because the method returns a value
+of the card itself so the method should be in the class Card so that it can 
+handle its own data rather than the TwoPlayerBlackJack class handling it.
+
+4.2
+a) the methods computeHandValue() and printHandValue() should stay in the 
+TwoPlayerBlackJack class because that is information that the class should handle.
+b) they should be in the TwoPlayerBlackJack class because those are two fucntions that
+are required in the actual game, the deck shouldn't compute that information, and the card
+just has one value not a hands worth so it should be the game itself.
+
+4.3
+a)isWinner() should belong to the TwoPlayerBlackJack class, it shows the winner of the game
+b)When playing the game it should tell you the winner, the game is calulating all of the scores
+so it should also know the outcome of the game.
+
+4.4
+To make the game with unlimited numbers of players we would add a new class called Player.
+The player class would hold the information like the hands of each of the player.
+The fields would be
+int bet;
+DeckOfCards deck;
+ArrayList<Card> hand;
+boolean Dealer;
+The dealer boolean would determine if the player is a dealer, if the boolean reads true then that
+player is the dealer and gains the priveleges of being the dealer, after each game
+the dealer will switch to the next player.
+int would be asked for before the start of each game from each of the players right after they are
+delt their cards.
+The ArrayList would hold the hand for each player, this would also mean taking the deck from the 
+game class and placing it into the player class. 
+the rest of the game would work just like it has with calculating the values of each players hand
+however each player will start with two cards and be asked if they want any more. the game
+will automatically stop asking once the value of the players hand has either reached five, went
+over twenty one, or has hit twenty one. This would be executed in a loop that will check each 
+time with two if statements as well as a scanner input, this would be sure to ask if they wanted
+a new card or not. 
